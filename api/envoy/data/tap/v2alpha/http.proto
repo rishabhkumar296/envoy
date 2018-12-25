@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package envoy.data.tap.v2alpha;
+option java_package = "io.envoyproxy.envoy.data.tap.v2alpha";
+option java_multiple_files = true;
+
+// fixfix
+message HttpBufferedTrace {
+  message Header {
+    // fixfix bytes?
+    string key = 1;
+    string value = 2;
+  }
+
+  // fixfix
+  repeated Header request_headers = 1;
+
+  // fixfix
+  repeated Header response_headers = 2;
+}

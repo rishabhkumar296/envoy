@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+import "validate/validate.proto";
+
+package envoy.config.filter.http.tap.v2alpha;
+option java_package = "io.envoyproxy.envoy.config.filter.http.tap.v2alpha";
+option java_multiple_files = true;
+
+// fixfix
+message Tap {
+  // fixfix
+  AdminConfig admin_config = 1;
+}
+
+// fixfix
+message AdminConfig {
+  // fixfix
+  string config_id = 1 [(validate.rules).string.min_bytes = 1];
+}
